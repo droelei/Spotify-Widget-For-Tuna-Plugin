@@ -34,7 +34,7 @@ html {
   opacity: 0;
   border-bottom: 3px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #cb93ff, #d5a7ff);
+  border-image-source: linear-gradient(to left, #18d860, #6cf770);
 }
 
 .SpotifyIcon {
@@ -45,7 +45,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to left, #cb93ff, #d5a7ff);
+  background: linear-gradient(to left, #18d860, #6cf770);
   padding: .4rem;
   color: rgb(239, 239, 239);
   border-radius: 50%;
@@ -146,7 +146,7 @@ html {
 #currentPlayingTrack {
   letter-spacing: 1px;
   font-size: .8em;
-  color: #d5a7ff;
+  color: #18d860;
   font-weight: 500;
   width: 260px;
   text-overflow: ellipsis;

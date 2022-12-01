@@ -1,11 +1,10 @@
-/* Spotify */
+/* Spotify Widget For Tuna Plugins */
 
 const getPlaying = () => {
     fetch('http://localhost:1608/')
         .then(response => response.json())
         .then((data) => {
-            // usePlaying(data);
-            setInterval(usePlaying(data), 1000);
+            usePlaying(data);
         })
         .then(usePlaying)
         .catch(error => console.log(`Error while fetching spotify informations ${error}`));
@@ -14,6 +13,7 @@ const getPlaying = () => {
 setInterval(getPlaying, 1000);
 
 const usePlaying = (data) => {
+
     if (!data) return;
 
     const content = document.querySelector('.currentPlayingContent');
@@ -37,10 +37,10 @@ const usePlaying = (data) => {
 
     const currentPlayingTrack = document.getElementById('currentPlayingTrack');
     const currentPlayingArtist = document.getElementById('currentPlayingArtist');
-    const spotifyicon = document.querySelector('.SpotifyIcon');
 
     let track = data.title;
     let artists = data.artists;
+
     if (currentPlayingArtist.innerHTML !== artists) {
         currentPlayingArtist.classList.add('currentPlayingArtistChanged');
     } else {
@@ -48,10 +48,8 @@ const usePlaying = (data) => {
     }
 
     if (currentPlayingTrack.innerHTML !== track) {
-        // spotifyicon.classList.add('SpotifyIconChanged');
         currentPlayingTrack.classList.add('currentPlayingTrackChanged');
     } else {
-        // spotifyicon.classList.remove('SpotifyIconChanged');
         currentPlayingTrack.classList.remove('currentPlayingTrackChanged');
     }
 
