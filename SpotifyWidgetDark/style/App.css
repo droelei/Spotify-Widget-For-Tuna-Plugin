@@ -19,7 +19,7 @@ html {
 }
 
 .currentPlayingContent {
-  box-shadow: 0 0 15px rgba(81, 84, 81, 0.8);
+  box-shadow: 0 0 10px rgba(34, 35, 34, 0.4);
   width: 350px;
   height: 60px;
   padding: 0.5rem 1rem;
@@ -103,7 +103,7 @@ html {
   margin-right: 1rem;
   border-radius: 5px;
   object-fit: cover;
-  box-shadow: 0 0 15px rgba(81, 84, 81, 0.8);
+  box-shadow: 0 0 10px rgba(34, 35, 34, 0.4);
 }
 
 .currentPlayingImageChanged {
