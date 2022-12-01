@@ -10,6 +10,8 @@
 
 ## Installation
 
+- Download this [repository](https://github.com/droelei/Spotify-Widget-For-Tuna-Plugin/archive/refs/heads/main.zip) as a zip file and extract it.
+
 - Download and install [Tuna](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 
 - Next step, connect your Spotify account to Tuna in Spotify section
