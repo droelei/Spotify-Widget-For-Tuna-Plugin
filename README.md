@@ -22,4 +22,4 @@
 
 ![Dark](/assets/setup_1.png)
 
-- To add it in OBS, create a new source "Browser" select "Local file" and choose the path of index.html
+- To add it in OBS, create a new source "Browser" select "Local file" and choose the path of index.html (Don't forget to set width to 1920 and height to 1080 or that of your screen resolution)
