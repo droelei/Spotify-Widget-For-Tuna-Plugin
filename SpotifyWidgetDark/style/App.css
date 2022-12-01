@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  font-family: "DM Sans", sans-serif;
+  overflow: hidden;
+}
+
+.Container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.currentPlayingContent {
+  box-shadow: 0 0 15px rgba(81, 84, 81, 0.8);
+  width: 350px;
+  height: 60px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(36, 31, 31);
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  opacity: 0;
+  border-bottom: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #18d860, #6cf770);
+}
+
+.SpotifyIcon {
+  transform: rotate(15deg);
+  top: -17px;
+  right: 15px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to left, #18d860, #6cf770);
+  padding: .4rem;
+  color: rgb(239, 239, 239);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  box-shadow: 0 6px 15px rgba(81, 84, 81, 0.5);
+}
+
+.SpotifyIconChanged {
+  animation: wiggle 0.2s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(30deg) scale(1);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(30deg) scale(1);
+  }
+}
+
+.show {
+  animation: fadeIn 0.4s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hide {
+  animation: fadeOut 0.4s ease-in-out both;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+#currentPlayingImage {
+  margin-right: 1rem;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(81, 84, 81, 0.8);
+}
+
+.currentPlayingImageChanged {
+  animation: imageChange 0.6s ease-in-out 0.1s both;
+}
+
+@keyframes imageChange {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#currentPlayingArtist {
+  font-size: 1rem;
+  color: rgb(239, 239, 239);
+  font-weight: 800;
+  width: 260px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: .1rem;
+}
+
+.currentPlayingArtistChanged {
+  animation: textAppearArtist .6s ease-in-out .1s both;
+}
+
+@keyframes textAppearArtist {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#currentPlayingTrack {
+  letter-spacing: 1px;
+  font-size: .8em;
+  color: #18d860;
+  font-weight: 500;
+  width: 260px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.currentPlayingTrackChanged {
+  animation: textAppearTrack .6s ease-in-out .3s both;
+}
+
+@keyframes textAppearTrack {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.currentPlayingArtistChanged {
+  animation: textAppearArtist 0.6s ease-in-out both;
+}
+
+@keyframes textAppearArtist {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

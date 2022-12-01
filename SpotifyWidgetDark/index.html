@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpotifyWidget</title>
+    <link rel="stylesheet" href="./style/App.css" />
+    <script src="./main.js" defer></script>
+  </head>
+
+  <body>
+    <div class="Container">
+      <div class="currentPlayingContent" style="opacity: 0">
+          <svg class="SpotifyIcon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 256 256"
+          >
+            <path
+              fill="currentColor"
+              d="M128.1 20a108 108 0 1 0 108 108a108.1 108.1 0 0 0-108-108Zm0 192a84 84 0 1 1 84-84a84.1 84.1 0 0 1-84 84Zm61.8-90.2a12.1 12.1 0 0 1-16.2 5.2a100.4 100.4 0 0 0-91.4 0a10.7 10.7 0 0 1-5.5 1.4a12 12 0 0 1-5.5-22.7a124.2 124.2 0 0 1 113.4 0a11.9 11.9 0 0 1 5.2 16.1Zm-20.4 39a11.9 11.9 0 0 1-16.1 5.2a55.7 55.7 0 0 0-25.3-6a54.4 54.4 0 0 0-25.4 6.1a12 12 0 0 1-5.5 1.3a12.1 12.1 0 0 1-10.7-6.6a12 12 0 0 1 5.3-16.1a80.1 80.1 0 0 1 72.4-.1a12.1 12.1 0 0 1 5.3 16.2Z"
+            />
+          </svg>
+        <img
+          id="currentPlayingImage"
+          width="50"
+          height="50"
+          alt=""
+          onerror="this.src='./spotify.png';"
+        />
+        <div>
+          <div id="currentPlayingArtist"></div>
+          <div id="currentPlayingTrack"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
